@@ -28,18 +28,17 @@
                                     <h3>{{Session::get('delivery_time')}}</h3>
                                 </div>
                             </div>
-                            <form action="{{route('payment')}}" method="POST">
+                            <form action="{{route('payment')}}" method="post">
                                 {!!csrf_field()!!}
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <script
                                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                         data-key="pk_test_nMG6joBPzK6kGAAjgzSuakUR"
-                                        data-amount="450"
+                                        data-amount="Delivery fee 450"
                                         data-name="ShopSwift"
-                                        data-description="2 widgets"
+                                        data-description=""
                                         data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                                         data-locale="auto"
-                                        data-zip-code="false"
                                         data-currency="gbp">
                                 </script>
                             </form>
@@ -54,6 +53,7 @@
 
 @section('scripts')
     <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
-    <script src="https://js.stripe.com/v3/"></script>
-    <script type="text/javascript">Stripe.setPublishableKey('pk_test_nMG6joBPzK6kGAAjgzSuakUR')</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 @endsection

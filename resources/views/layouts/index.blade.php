@@ -157,15 +157,10 @@
 @endsection
 
 @section('scripts')
-
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript">Stripe.setPublishableKey('pk_test_nMG6joBPzK6kGAAjgzSuakUR')</script>
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection
 
 

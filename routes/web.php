@@ -22,10 +22,6 @@ Route::get('/checkout', function(){
     return view('Checkout.Checkout');
 })->name('getcheckout');
 
-Route::post('/checkout', 'PaymentController@postCheckout')->name('postcheckout');
-
 Route::post('/payment', 'PaymentController@StripePayment')->name('payment');
-
-
 
 Route::get('/cart', 'PaymentController@AddToCart')->name('cart');

@@ -33,16 +33,14 @@ class PaymentController extends Controller
             "email" => $id
         ));
 
-        //Creating the charge:
+        /*Creating the charge:
         $charge = \Stripe\Charge::create(array(
             "amount" => 495,
             "currency" => "gbp",
             "customer" => $customer->id
-        ));
+        ));*/
 
-        //return view('layouts.confirmation');
-
-        dd($request->all());
+        return view('layouts.confirmation');
     }
 
 
