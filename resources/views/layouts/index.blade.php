@@ -5,13 +5,13 @@
 <div class="intro-header">
     <div class="jumbotron intro-message">
         <h2>The quicker, faster way to shop</h2>
-        <p>Order online and have your good delivered in minutes</p>
+        <p>Order online and have your goods delivered in minutes</p>
         <p></p>
         <form method="post" action="{{route('order')}}" class="require-validation"  data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj">
             {!!csrf_field()!!}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="row order_inputs">
-                <div class="col-lg-8 col-lg-offset-2 col-xs-12">
+                <div class="col-lg-6 col-lg-offset-2">
                     <input class="form-control input-sm" type="text" name="delivery_items" required="" placeholder="What would you like? e.g. Large Big Mac Meal">
                 </div>
                 <div class="col-lg-6 col-lg-offset-2">
@@ -131,7 +131,7 @@
 <footer>
     <div class="row">
         <div class="col-md-4 col-sm-6 footer-navigation">
-            <h3><a href="#"><img class="img-responsive" src="http://shopswift.co.uk/ShopSwiftLogo.png" alt="ShopSwift"></a></h3>
+            <h3><a href="#"><img class="img-responsive" src="{{asset('images/ShopSwiftLogo.png')}}" alt="ShopSwift"></a></h3>
             <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Legal </a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">FAQ </a><strong> · </strong><a href="#">Contact</a></p>
             <p class="company-name">ShopSwift Deliveries Ltd© 2017</p>
         </div>
@@ -157,11 +157,15 @@
 @endsection
 
 @section('scripts')
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript">Stripe.setPublishableKey('pk_test_nMG6joBPzK6kGAAjgzSuakUR')</script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <script type="text/javascript" src="{{ URL::to('js/checkout.js')}}"></script>
 @endsection
 
 

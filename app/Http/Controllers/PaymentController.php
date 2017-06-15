@@ -33,7 +33,16 @@ class PaymentController extends Controller
             "email" => $id
         ));
 
-        return view('layouts.confirmation');
+        //Creating the charge:
+        $charge = \Stripe\Charge::create(array(
+            "amount" => 495,
+            "currency" => "gbp",
+            "customer" => $customer->id
+        ));
+
+        //return view('layouts.confirmation');
+
+        dd($request->all());
     }
 
 
@@ -55,11 +64,6 @@ $charge = \Stripe\Charge::create(array(
 ));
 Stripe::setapikey('sk_test_fSIx3RsWOsbIr52tlmYFWxio');
 
-//Creating the charge:
-        $charge = \Stripe\Charge::create(array(
-            "amount" => 495,
-            "currency" => "gbp",
-            "customer" => $customer->id
-        ));
+
 
 */

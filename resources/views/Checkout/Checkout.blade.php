@@ -36,9 +36,10 @@
                                         data-key="pk_test_nMG6joBPzK6kGAAjgzSuakUR"
                                         data-amount="450"
                                         data-name="ShopSwift"
-                                        data-description=""
+                                        data-description="2 widgets"
                                         data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                                         data-locale="auto"
+                                        data-zip-code="false"
                                         data-currency="gbp">
                                 </script>
                             </form>
@@ -55,5 +56,4 @@
     <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <script type="text/javascript">Stripe.setPublishableKey('pk_test_nMG6joBPzK6kGAAjgzSuakUR')</script>
-    <script type="text/javascript" src="/js/checkout.js"></script>
 @endsection
