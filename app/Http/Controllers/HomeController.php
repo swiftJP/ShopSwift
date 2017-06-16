@@ -28,10 +28,19 @@ class HomeController extends Controller
 
     public function mail(Request $request) {
 
+        $order = array(
+            "user"=> Auth::user()->name,
+            "delivery_items" => $request->input('delivery_items'),
+            "delivery_address" => $request->input('delivery_address'),
+            "delivery_time" => $request->input('delivery_time'),
+            "phone"=> Auth::user()->phone
+        );
 
-        Session::put('delivery_items', $request->input('delivery_items'));
-        Session::put('delivery_address', $request->input('delivery_address'));
-        Session::put('delivery_time', $request->input('delivery_time'));
+        Nexmo::message()->send([
+            'to' => '447972149992',
+            'from' => 'ShopSwift Delivery',
+            'text' => $order
+        ]);
         return view('checkout.checkout');
     }
 }
