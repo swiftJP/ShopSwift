@@ -22,7 +22,7 @@ class PaymentController extends Controller
     }
 
     public function StripePayment (Request $request) {
-        \Stripe\Stripe::setapikey('sk_test_fSIx3RsWOsbIr52tlmYFWxio');
+        \Stripe\Stripe::setapikey('sk_live_aNWvTGjxhq5b2dG43DvagJr3');
         $token = $request->stripeToken;
         $id = $request->stripeEmail;
 
