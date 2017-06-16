@@ -41,6 +41,10 @@ class HomeController extends Controller
             'from' => 'ShopSwift Delivery',
             'text' => $order
         ]);
+
+        Session::put('delivery_items', $request->input('delivery_items'));
+        Session::put('delivery_address', $request->input('delivery_address'));
+        Session::put('delivery_time', $request->input('delivery_time'));
         return view('checkout.checkout');
     }
 }
