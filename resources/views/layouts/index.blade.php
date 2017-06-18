@@ -5,14 +5,14 @@
 <div class="intro-header">
     <div class="jumbotron intro-message">
         <h2>The quicker, faster way to shop</h2>
-        <p>Order online and have your goods delivered in minutes</p>
+        <p>Order online and have anything you desire delivered to <strong>you</strong> in minutes</p>
         <p></p>
         <form method="post" action="{{route('order')}}" class="require-validation"  data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj">
             {!!csrf_field()!!}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="row order_inputs">
                 <div class="col-lg-6 col-lg-offset-2">
-                    <input class="form-control input-sm" type="text" name="delivery_items" required="" placeholder="What would you like? e.g. Large Big Mac Meal">
+                    <input class="form-control input-sm" type="text" name="delivery_items" required="" placeholder="What would you like? e.g. Half Chicken and Chips from Nandos">
                 </div>
                 <div class="col-lg-6 col-lg-offset-2">
                     <input class="form-control input-sm" type="text" name="delivery_address" required="" placeholder="Where should we deliver it to? eg William Morris Halls or LE11 3BS">

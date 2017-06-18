@@ -36,6 +36,7 @@ class HomeController extends Controller
             "phone"=> Auth::user()->phone
         );
 
+
         Nexmo::message()->send([
             'to' => '447972149992',
             'from' => 'ShopSwift Delivery',
@@ -45,7 +46,7 @@ class HomeController extends Controller
         Session::put('delivery_items', $request->input('delivery_items'));
         Session::put('delivery_address', $request->input('delivery_address'));
         Session::put('delivery_time', $request->input('delivery_time'));
-        return view('checkout.checkout');
+        return view('Checkout.Checkout');
     }
 }
 

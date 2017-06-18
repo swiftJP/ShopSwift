@@ -25,3 +25,9 @@ Route::get('/checkout', function(){
 Route::post('/payment', 'PaymentController@StripePayment')->name('payment');
 
 Route::get('/cart', 'PaymentController@AddToCart')->name('cart');
+
+/*Store Routes*/
+Route::get('/mcds', function () {
+    return view('Stores.Mcd');
+})->name('mcds'); //Mcdonalds
+
