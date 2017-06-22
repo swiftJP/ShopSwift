@@ -57,7 +57,7 @@
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                     <script
                                                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                                            data-key="pk_test_nMG6joBPzK6kGAAjgzSuakUR"
+                                                            data-key="pk_live_9PjCBPoSvcOcMUdRMVsyg9cl"
                                                             data-amount="Delivery fee 450"
                                                             data-name="ShopSwift"
                                                             data-description=""
