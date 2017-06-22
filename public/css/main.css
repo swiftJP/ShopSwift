@@ -6,8 +6,24 @@
     padding-top:20%;
     padding-bottom:20%;
     text-align:center;
-    background:url('https://static.pexels.com/photos/113758/pexels-photo-11375') no-repeat center top;
+    background:url('https://static.pexels.com/photos/325526/pexels-photo-325526.jpeg') no-repeat center top;
     background-size: cover;
+}
+
+#navlogo {
+    height:65px;
+    margin: 0;
+}
+
+#customButton {
+    margin: 2%;
+    padding: 1% 10% 1% 10%;
+}
+
+.navbar-right {
+    vertical-align: middle;
+    font-size: 150%;
+    padding-top: 1%;
 }
 
 .navbar .navbar-default {
@@ -20,6 +36,7 @@
 
 .intro-message {
     color: #ffffff;
+    border-radius:20px;
 }
 
 .process {
