@@ -1,3 +1,7 @@
+* {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 body {
   font-family:Helvetica,Arial,sans-serif;
   font-size:14px;
@@ -6,17 +10,30 @@ body {
   background-color:#fff;
 }
 
+.navbar-right {
+  vertical-align: middle;
+  font-size: 150%;
+  padding-top: 1%;
+}
+
 .intro-header {
   text-align:center;
   padding:10%;
-  background:url('https://static.pexels.com/photos/113758/pexels-photo-113758.jpeg') no-repeat center top;
+  background:url('https://static.pexels.com/photos/325526/pexels-photo-325526.jpeg') no-repeat center top;
   background-size:cover;
+}
+
+
+#navlogo {
+  height:65px;
+  margin: 0;
 }
 
 .intro-header .jumbotron {
   padding:5%;
-  background-color:rgba(255,255,255,0.6);
+  background-color:rgba(255,255,255,0.8);
   margin-top:65px;
+  border-radius:20px;
 }
 
 @media (max-width:991px) {
@@ -33,6 +50,15 @@ body {
   border-radius:10px;
   display:inline-block;
   margin:1%;
+}
+
+#customButton {
+  margin: 2%;
+  padding: 1% 10% 1% 10%;
+}
+
+.options {
+  text-align:center;
 }
 
 .process {

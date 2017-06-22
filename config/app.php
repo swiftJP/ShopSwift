@@ -169,6 +169,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Nexmo\Laravel\NexmoServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,7 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Nexmo' => \Nexmo\Laravel\Facade\Nexmo::class,
-
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
