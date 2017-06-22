@@ -10,8 +10,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('main.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -89,8 +87,8 @@
 
             ga('create', 'UA-101448279-1', 'auto');
             ga('send', 'pageview');
-
         </script>
+
     </div>
 
 </body>
