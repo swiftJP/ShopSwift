@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="mcd-intro">
-        <div class="container">
-            <div class="intro-message">
+    <div class="fast-food-intro">
+        <div class="order-message">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <h1>McDonalds Loughborough</h1>
@@ -13,22 +13,74 @@
 
                     <div class="col-lg-4">
                         <br>
-                        <h4>Average Delivery time: 36 mins</h4>
-                        <br>
-                        <h4>Delivery charge: £4.95</h4>
+                        <h4>Average Delivery time: 28 mins</h4>
+                        <br><br>
+                        <h4>Delivery charge: £3.95</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
+    <section class="well-lg popular-stores">
+        <div class="order">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-7 col-sm-9">
+                        <div>
+                            <h3>Order now</h3>
+                            <form action="{{route('send')}}" method="post">
+                            {{ csrf_field() }}
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <div class="form-group del-input">
+                                    <textarea class="form-control input-lg" cols="40" id="delivery_items" name="delivery_items" placeholder="What would you like? e.g Big Mac Meal with fanta with no ice X 1" rows="7"></textarea>
+                                </div>
 
-    </div>
+                                <div class="form-group del-input">
+                                    <textarea class="form-control input-lg" cols="40" rows="2" id="delivery_address" name="delivery_address" placeholder="Where should we deliver it to? e.g LE11 3TQ or Harry French Halls etc" type="text"></textarea>
+                                </div>
 
-    <section>
-        <form>
-            <input>
-        </form>
+                                <div class="form-group del-input">
+                                    <label class="control-label"><h4>When do you want it?</h4></label>
+                                    <select name="delivery_time" required="required" class="input-lg">
+                                        <option>ASAP</option>
+                                        <option>2 HOURS</option>
+                                    </select>
+                                </div>
+                                <div><input name="delivery_store" value="McDonalds" id="delivery_store" style="display:none;"></div>
+                                <button type="submit" id="SS-btn" class="btn btn-primary btn-lg text-center">ShopSwift<span class="glyphicon glyphicon-shopping-cart"></span></button><p>One of our Swift Shoppers will contact after your order has been placed</p>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-5 col-sm-3">
+                        <h3>What's Hot?</h3>
+                        <div class="whats-hot">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <div id="pic1">
+                                        </div>
+                                        <div class="caption">
+                                            <h4 class="text-center">Tennessee Stack Meal</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div>
+                                        <div id="pic2">
+                                        </div>
+                                        <h4 class="text-center">Ranch California Chicken</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
+    @include('footer')
 @endsection

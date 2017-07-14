@@ -9,13 +9,6 @@ body {
     background-color:#fff;
 }
 
-.intro-header{
-    padding-top:20%;
-    padding-bottom:20%;
-    text-align:center;
-    background:url('https://static.pexels.com/photos/325526/pexels-photo-325526.jpeg') no-repeat center top;
-    background-size: cover;
-}
 /*NAVBAR STYLING*/
 #navlogo {
     height:65px;
@@ -37,25 +30,33 @@ body {
 }
 
 /*INTRO BLOCK*/
-.intro-header {
+.intro-header{
     text-align:center;
-    padding:10%;
-    background:url('https://static.pexels.com/photos/325526/pexels-photo-325526.jpeg') no-repeat center top;
-    background-size:cover;
+    background:url('https://static.pexels.com/photos/2752/city-sunny-people-street.jpg') no-repeat center top;
+    background-size: cover;
 }
 
 .intro-header .jumbotron {
-    padding:5%;
-    background-color:rgba(255,255,255,0.8);
-    margin-top:65px;
+    margin:0;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius:20px;
+    color:white;
+    padding-bottom:20%;
+    padding-top:20%;
+}
+
+#intro-btn {
+    padding: 1% 10% 1% 10%;
+}
+
+hr {
+    width: 10px;
 }
 
 @media (max-width:991px) {
     .intro-header .jumbotron {
         border-radius:20px;
         padding:2%;
-        background-color:rgba(255,255,255,0.6);
     }
 }
 
@@ -76,6 +77,11 @@ body {
 .process {
     text-align:center;
     padding:1%;
+    background-color: #ffffff;
+    color: #000000;
+    padding-top:2%;
+    padding-bottom:7%;
+    font-size:18px;
 }
 
 #process {
@@ -85,15 +91,7 @@ body {
 .process .glyphicon {
     font-size:50px;
     padding:10px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.process {
-    background-color:black;
-    color:#fefcfc;
-    padding-top:2%;
-    padding-bottom:7%;
-    font-size:18px;
+    color: rgb(0, 0, 0);
 }
 
 @media (max-width:767px) {
@@ -122,7 +120,7 @@ body {
     background-color:rgb(99,94,94);
     color:white;
     font-style:italic;
-    padding:1%;
+    padding:5%;
 }
 
 .newsletter h2 {
@@ -208,23 +206,6 @@ body {
 .thumbnail img {
     height:250px;
     width:100%;
-}
-
-.mcd-intro {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    color: rgb(248,248,248);
-    background: url(http://www.jwa-architects.co.uk/img/projects/travel/mcdonalds/3.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.mcd-intro .intro-message {
-    background-color: rgba(0,0,0,0.5);
-    margin-top: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color:white;
 }
 
 #payment-form {
@@ -348,4 +329,176 @@ div.social-links {
 
 #promo{
     margin:0;
+}
+
+#about-img {
+    ;
+}
+
+#about-img-message {
+    padding:7%;
+    background-color: rgb(193, 198, 255);
+    font-size: 1%;
+}
+
+#about-img-message {
+    color:white;
+}
+
+#about-quote {
+    background: url('https://static.pexels.com/photos/28094/pexels-photo-28094.jpg') no-repeat center center;
+    background-size: cover;
+    padding:10%;
+}
+
+.well-lg {
+    background-color: rgb(245, 245, 245);
+}
+
+.favourite-img {
+    border-color: rgba(0,0,0,0);
+}
+.whats-hot {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+
+@media (max-width:767px) {
+    .whats-hot h4 {
+        font-size: 80%;
+        text-align: center;
+    }
+
+    #pic1 {
+        padding: 100% 10% 1% 10%;
+    }
+}
+
+#pic1 {
+    background: url('http://www.mcdonalds.co.uk/content/dam/mcdonaldsuk/item/live/mcdonalds-Week-7-8-The-Tennessee-Stack.png') no-repeat center bottom;
+    background-size: cover;
+    padding:40%;
+    margin-top:10%;
+    margin-bottom:0;
+ }
+
+#pic2 {
+    background: url('http://www.mcdonalds.co.uk/content/dam/mcdonaldsuk/item/live/mcdonalds-The-Ranch-California-Chicken.png') no-repeat center bottom;
+    background-size: cover;
+    padding:40%;
+    margin-bottom:0;
+}
+
+.del-input {
+    border: none;
+    outline: none;
+}
+
+#delivery_items {
+    padding: 5% 0 5% 0;
+}
+
+#delivery_address {
+    margin: 5% 0 5% 0;
+    padding: 5% 0 5% 0;
+}
+
+#SS-btn {
+    padding:2% 7% 2% 7%;
+}
+
+.about-message {
+    background: url('https://static.pexels.com/photos/264507/pexels-photo-264507.jpeg') no-repeat center;
+    background-size:cover;
+}
+
+.about-message .container {
+    background: white;
+    padding: 1% 5% 1% 5%;
+}
+
+/*Stores Nav Tabs and JS*/
+
+ul.nav-tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: solid dodgerblue 2px;
+    background-color: white;
+}
+
+ul.nav-tabs li {
+    background: none;
+    color: #226bff;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.tab-content{
+    display:none;
+    background: #ffffff;
+    padding: 5%;
+}
+
+.tab-content.current {
+    display:block;
+    padding:1% 10%;
+    margin:0;
+}
+
+.stores-img {
+    background: url("https://static.pexels.com/photos/4621/fruits-grocery-bananas-market.jpg") no-repeat center center;
+    background-size: cover;
+    padding:0;
+    margin:0;
+}
+
+.stores-intro {
+    padding:7% 0 3% 0;
+    color:white;
+    margin:0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@media (max-width:767px) {
+    .stores-intro {
+        padding:20% 0 2% 0;
+        color:white;
+        margin:0;
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+.stores-background {
+    background: rgb(245, 245, 245);
+}
+
+/*OUR STORES*/
+.grocery-intro {
+    background: url(https://cdn.pixabay.com/photo/2016/11/18/13/16/boxes-1834416_960_720.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.fast-food-intro {
+    background: url(https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.fashion-intro {
+    background: url(https://i.ytimg.com/vi/aMZx2C8YDsU/maxresdefault.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.other-intro {
+    background: url(http://wdyt.org.uk/wp-content/uploads/2016/10/gloucester-high-street-e1493822265120.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.order-message {
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color:white;
 }

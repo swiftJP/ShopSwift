@@ -22,8 +22,6 @@ class mymail extends Mailable
         $this->delivery_items=$delivery_items;
         $this->delivery_address=$delivery_address;
         $this->delivery_time=$delivery_time;
-
-
     }
 
 
@@ -32,7 +30,6 @@ class mymail extends Mailable
         return
             $this->from('noreply@shopswift.com')
                  ->view('mail.mymail');
-
     }
 }
 

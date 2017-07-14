@@ -1,0 +1,59 @@
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.landing-intro {
+  background: url('https://static.pexels.com/photos/501123/pexels-photo-501123.jpeg') no-repeat center center;
+  background-size: cover;
+}
+
+.landing-message {
+  padding:3% 0 15% 0;
+  color:white;
+  text-align: center;
+}
+
+.backdrop {
+  background: rgba(0,0,0,0.6);
+}
+
+#line {
+  border-color:#F05F40;
+  border-width:1px;
+  max-width:350px;
+}
+
+#headline {
+  font-weight: lighter;
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 1.5;
+  padding: 5% 0% 1% 0%;
+}
+
+#headline-para {
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 1% 0% 1% 0%;
+  color: #959396;
+}
+
+#logo {
+  padding: 5% 0% 10% 0%;
+}
+
+#email {
+  margin:0;
+}
+
+#notify-message {
+  color:green;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width:1024px) {
+  .landing-message {
+    padding:7% 0 90% 0
+  }
+}

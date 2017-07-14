@@ -12,7 +12,7 @@
                             <div class="row">
                                 <div class="col-xs-8 col-xs-offset-1">
                                     <h3><strong>You ordered:</strong></h3>
-                                    <h3>{{Session::get('delivery_items')}}</h3>
+                                    <h3>{{Session::get('delivery_items')}} from {{Session::get('delivery_store')}}</h3>
                                 </div>
                             </div>
                             <div class="row">

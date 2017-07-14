@@ -12,10 +12,14 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
 use Nexmo\Laravel\Facade\Nexmo;
 use Session;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
 {
+    public function __construct() {
+        $this->middleware('LaunchRedirect');
+    }
+
     public function postCheckout(Request $request)
     {
 
