@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Waiting;
 use Illuminate\Http\Request;
+use Nexmo\Laravel\Facade\Nexmo;
 
 class LandingController extends Controller
 {
@@ -18,6 +19,13 @@ class LandingController extends Controller
 
         //Save into Database
         $waiting->save();
+
+        //Text alert
+        Nexmo::message()->send([
+            'to' => '447972149992',
+            'from' => 'ShopSwift Subscribe',
+            'text' => 'New subscriber: '.$email
+        ]);
 
         return redirect()->back();
     }
