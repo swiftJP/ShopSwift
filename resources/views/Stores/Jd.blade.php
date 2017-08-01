@@ -6,14 +6,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1>JD Sports Leicester</h1>
+                        <h1>{{$store}}</h1>
                         <br>
                         <h4>Brent Cross, NW4 3FP | Deliveries until 19:45 |</h4>
+                        <h5>*Please note, items are subject to store availability</h5>
                     </div>
 
                     <div class="col-lg-4">
                         <br>
-                        <h4>Average Delivery time: 55 mins</h4>
+                        <h4>Average Delivery time: {{$del_time}} mins</h4>
                         <br><br>
                         <h4>Delivery charge: £3.95</h4>
                     </div>
@@ -22,67 +23,29 @@
         </div>
     </div>
 
-    <section class="well-lg popular-stores">
-        <div class="order">
-            <div class="container">
+    <div>
+        <div class="container">
+            <h1 class="item-header">All items</h1>
+            @foreach($products->chunk(4) as $productChunk)
                 <div class="row">
-                    <div class="col-xs-7 col-sm-9">
-                        <div>
-                            <h3>Order now</h3>
-                            <form action="{{url('send')}}" method="post">
-                                <input type='hidden' name='csrfmiddlewaretoken'/>
-                                <div class="form-group del-input">
-                                    <textarea class="form-control input-lg" cols="40" id="delivery_items" name="delivery_items" placeholder="What would you like? e.g Big Mac Meal with fanta with no ice X 1" rows="7"></textarea>
+                    @foreach($productChunk as $product)
+                        <div class="col-xs-3">
+                            <div class="thumbnail">
+                                <img class="img-responsive" src="{{$product->imagePath}}"/>
+                                <div class="caption">
+                                    <p>{{$product->title}}</p>
                                 </div>
-
-                                <div class="form-group del-input">
-                                    <textarea class="form-control input-lg" cols="40" rows="2" id="delivery_address" name="delivery_address" placeholder="Where should we deliver it to? e.g LE11 3TQ or Harry French Halls etc" type="text"></textarea>
+                                <div class="clearfix">
+                                    <div class="pull-left price">£{{$product->price}}</div>
+                                    <a href="{{route('addToCartJD', ['id' => $product->id])}}" role="button" class="btn btn-primary pull-right"><span class="fa fa-plus"></span></a>
                                 </div>
-
-                                <div class="form-group del-input">
-                                    <label class="control-label"><h4>When do you want it?</h4></label>
-                                    <select class="input-lg">
-                                        <option>ASAP</option>
-                                        <option>2 HOURS</option>
-                                    </select>
-                                </div>
-                                <input type='hidden' name='delivery_store' value="JD"/>
-                                <button type="submit" id="SS-btn" class="btn btn-primary btn-lg text-center">ShopSwift<span class="glyphicon glyphicon-shopping-cart"></span></button><p><br>*One of our Swift Shoppers will contact after your order has been placed</p>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-5 col-sm-3">
-                        <h3>What's Hot?</h3>
-                        <div class="whats-hot">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div>
-                                        <div><img class="img-responsive" src="{{asset('images/Air-Max.jpg')}}"/>
-                                        </div>
-                                        <div class="caption">
-                                            <h4 class="text-center">Black Air Max 95</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div>
-                                        <div><img class="img-responsive" src="{{asset('images/puma-slides.jpg')}}"/>
-                                        </div>
-                                        <div class="caption">
-                                            <h4 class="text-center">Women's Puma x Fenty slides</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-
+                    @endforeach
                 </div>
-            </div>
+            @endforeach
         </div>
-    </section>
+    </div>
+
     @include('footer')
 @endsection

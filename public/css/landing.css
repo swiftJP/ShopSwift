@@ -52,6 +52,24 @@
   display: none;
 }
 
+.landing-tabs {
+  padding: 5% 0 0 0;
+}
+
+.landing-tabs a {
+  font-family: 'Heebo', sans-serif;
+  color:white;
+  font-size:25px;
+  text-decoration: underline;
+}
+.landing-tabs a:hover {
+  color:red;
+}
+
+#blog {
+  padding:0 0 0 5%;
+}
+
 @media (max-width:1024px) {
   .landing-message {
     padding:7% 0 90% 0

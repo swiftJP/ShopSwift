@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/landing.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,24 +55,30 @@
                     <img class="img-responsive" id="logo" src="{{asset('images/ShopSwiftLogo.png')}}"/>
                 </div>
             </div>
-
-
             <div class="col-lg-12">
                 <h3 id="headline">The quicker, more convenient way to shop </h3>
                 <h3 id="headline-para">Bringing you your goods from your favourite high street stores on demand. Drop your email below to be the first to know when we're launching!</h3>
-                    <form method="post" action="{{route('list')}}">
-                        {{ csrf_field() }}
-                        <div class="col-md-6 col-md-offset-3 col-xs-12">
-                            <div class="input-group">
-                                <input type="text" name="email" id="email" class="form-control" placeholder="Email">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-info" id="notify" type="submit">Notify Me</button>
-                                </span>
-                            </div>
+                <form method="post" action="{{route('list')}}">
+                    {{ csrf_field() }}
+                    <div class="col-md-6 col-md-offset-3 col-xs-12">
+                        <div class="input-group">
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" id="notify" type="submit">Notify Me</button>
+                            </span>
                         </div>
-                    </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="text-center">
+                <div class="landing-tabs">
+                    <a href="{{route('about')}}" id="about">About</a>
+                    <a href="{{route('blog')}}" id="blog">Blog</a>
                 </div>
             </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
@@ -79,7 +86,7 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
  </header>
 
 <script>

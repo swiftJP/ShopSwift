@@ -35,9 +35,6 @@
                             We started ShopSwift because we believe that there is a better way to shop, that will save you time and stress <br>
                             At ShopSwift we have one mission; to make all your favourite items from your favourite stores in your area accessible on-demand, saving you time, energy and money.
                             We passionately believe that your time is the most precious asset and so <strong>we're here to help you!</strong></h4>
-                        <h4><br>
-                            Created in 2016 by two daring Loughborough students,  ShopSwift has grown to become the go-to on-demand service in the Midlands, supplying you
-                        with all your favourite stores such as  Tesco, Primark, JD Sports, Body Shop, Aldi and many more.</h4>
                     </div>
                 </div>
             </div>

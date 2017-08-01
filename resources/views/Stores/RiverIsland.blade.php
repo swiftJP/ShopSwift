@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1>River Island</h1>
+                        <h1>{{$store}}</h1>
                         <br>
                         <h4>Brent Cross, NW4 3FP | Deliveries until 19:45 |</h4>
                     </div>

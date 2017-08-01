@@ -32,17 +32,28 @@ body {
 /*INTRO BLOCK*/
 .intro-header{
     text-align:center;
-    background:url('https://static.pexels.com/photos/2752/city-sunny-people-street.jpg') no-repeat center top;
+    background:url('https://static.pexels.com/photos/501123/pexels-photo-501123.jpeg') no-repeat center top;
     background-size: cover;
 }
 
 .intro-header .jumbotron {
     margin:0;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius:20px;
     color:white;
-    padding-bottom:20%;
-    padding-top:20%;
+    padding-bottom:12%;
+    padding-top:12%;
+}
+
+
+.intro-header h1 {
+    margin: 0;
+    padding: 1% 0% 3% 0%;
+}
+
+#intro-comment {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #959396;
+    margin:0;
 }
 
 #intro-btn {
@@ -56,7 +67,7 @@ hr {
 @media (max-width:991px) {
     .intro-header .jumbotron {
         border-radius:20px;
-        padding:2%;
+        padding:10% 0 10% 0;
     }
 }
 
@@ -73,26 +84,39 @@ hr {
     padding: 1% 10% 1% 10%;
 }
 
-/*PROCESS*/
-.process {
-    text-align:center;
-    padding:1%;
+/*INFO STYLING*/
+.info {
+    padding: 5% 0 5% 0;
     background-color: #ffffff;
     color: #000000;
-    padding-top:2%;
-    padding-bottom:7%;
     font-size:18px;
+}
+
+.info h1 {
+    padding: 0 0 1% 0;
+    text-align:center;
+}
+
+.info .thumbnail {
+    border: 0 none;
+    box-shadow: none;
 }
 
 #process {
     margin:3%;
 }
 
-.process .glyphicon {
-    font-size:50px;
-    padding:10px;
-    color: rgb(0, 0, 0);
+.line {
+    background-color: red ;
+    height: 2px !important;
+    width: 50px !important;
 }
+
+.process-comments {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #959396;
+}
+
 
 @media (max-width:767px) {
     .row.process-steps {
@@ -100,8 +124,6 @@ hr {
         margin-bottom:20px;
     }
 }
-
-
 
 .most-popular h1 {
     text-align:center;
@@ -114,10 +136,16 @@ hr {
         margin-bottom:20px;
     }
 }
+
 .newsletter {
+    background:url('https://static.pexels.com/photos/492755/pexels-photo-492755.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.newsletter-frame {
     align-content:center;
     text-align:center;
-    background-color:rgb(99,94,94);
+    background-color:rgba(0,0,0,0.5);
     color:white;
     font-style:italic;
     padding:5%;
@@ -126,6 +154,34 @@ hr {
 .newsletter h2 {
     color:white;
     font-style:italic;
+}
+
+.web-app {
+    padding-top:5%;
+}
+
+.web-app hr {
+    background-color: #b9b9b7;
+    color:#b9b9b7;
+    width:95%;
+    height:1px;
+    margin:0 0 5% 0;
+}
+
+#web-app-title {
+    font-family: 'Bitter', serif;
+    font-weight: bolder;
+    padding: 20% 0 0 0;
+}
+
+.web-app .fa {
+    border: solid #202020 1px;
+    background-color: #404040;
+    font-size: 20px;
+    color:white;
+    border-radius: 100px;
+    padding:2%;
+    margin: 0 1% 0 1%;
 }
 
 @media (max-width: 600px){
@@ -396,13 +452,9 @@ div.social-links {
 }
 
 #delivery_items {
-    padding: 5% 0 5% 0;
+    padding: 2% 0 2% 0;
 }
 
-#delivery_address {
-    margin: 5% 0 5% 0;
-    padding: 5% 0 5% 0;
-}
 
 #SS-btn {
     padding:2% 7% 2% 7%;
@@ -436,21 +488,20 @@ ul.nav-tabs li {
 }
 
 
-.tab-content{
-    display:none;
+.stores-content {
+    display:block;
     background: #ffffff;
-    padding: 5%;
+    padding: 1% 2% 2% 2%;
+    margin: 10% 0 5% 0;
 }
 
-.tab-content.current {
-    display:block;
-    padding:1% 10%;
-    margin:0;
+.stores-content .thumbnail {
+    border: 0 none;
+    box-shadow: none;
 }
 
 .stores-img {
-    background: url("https://static.pexels.com/photos/4621/fruits-grocery-bananas-market.jpg") no-repeat center center;
-    background-size: cover;
+    background: rgb(78, 137, 245);
     padding:0;
     margin:0;
 }
@@ -472,18 +523,92 @@ ul.nav-tabs li {
 }
 
 .stores-background {
-    background: rgb(245, 245, 245);
+    background: url('https://images.pexels.com/photos/479190/pexels-photo-479190.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') no-repeat center center;
+    background-size: cover;
+}
+
+.stores-title {
+    font-family: 'Alegreya Sans SC', sans-serif ;
+    font-weight: lighter;
+    padding-left:2%;
+    color: #1477ff;
 }
 
 /*OUR STORES*/
-.grocery-intro {
-    background: url(https://cdn.pixabay.com/photo/2016/11/18/13/16/boxes-1834416_960_720.jpg) no-repeat top center;
+
+.blog-intro {
+    background: url(https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) no-repeat bottom center;
     background-size: cover;
 }
 
-.fast-food-intro {
-    background: url(https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg) no-repeat top center;
-    background-size: cover;
+.blog-message {
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color:white;
+}
+
+#blog-logo {
+    margin:0;
+    padding:0;
+}
+
+.blog-navbar {
+    background-color: #343434;
+}
+
+.blog-navbar ul {
+    list-style-type: none;
+    margin: 0;
+
+    padding: 1% 0 1% 0;
+}
+
+.blog-navbar li {
+    display: inline;
+    padding: 5%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.blog-navbar a {
+    text-decoration: none;
+    color:white;
+}
+
+.blog-hr {
+    width: 250px;
+    height: 1px;
+    color:red;
+    background-color: red;
+    margin-top: 2%;
+}
+
+.blog-author {
+    font-family: 'Kalam', cursive;
+}
+
+.blog-posts .thumbnail {
+    background-color: #f7f7f7;
+}
+
+#blog-para {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #b4b2b5;
+}
+
+.blog-body .thumbnail {
+    border: 0 none;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.blog-body .img-responsive {
+    margin-bottom: 0;
+}
+
+.blog-body h4 {
+    font-family: 'Spectral', serif;
 }
 
 .fashion-intro {
@@ -502,3 +627,10 @@ ul.nav-tabs li {
     padding-bottom: 10%;
     color:white;
 }
+
+.price {
+    font-size:20px;
+    font-weight: bold;
+    padding: 1% 0% 0 5%;
+}
+

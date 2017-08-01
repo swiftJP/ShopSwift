@@ -1,0 +1,56 @@
+<html lang="{{ config('app.locale') }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>ShopSwift | Goods delivered to you in minutes</title>
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Fira+Sans|Alegreya+Sans+SC|Spectral|Kalam|Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/Pretty-Footer.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/SwiftStyle.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{ asset('icons/SSFavicon.jpg') }}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="blog-intro">
+    <div class="blog-message">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-4 col-xs-offset-3">
+                    <img id="blog-logo" class="img-responsive" src="{{asset('images/ShopSwiftLogo.png')}}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h2>The <i style="color: #00a5ff;">Swift</i> Blog</h2>
+                    <h3 id="blog-para">Fashion. Lifestyle. Business. We've got you covered.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="blog-navbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <ul>
+                    <li><a href="{{route('home')}}">Home</a></li>
+                    <li><a href="{{route('blog')}}">Blog</a></li>
+                    <li><a href="{{route('about')}}">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@yield('blog')
+
+</body>
+</html>

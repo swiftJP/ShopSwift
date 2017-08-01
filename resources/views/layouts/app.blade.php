@@ -11,7 +11,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Fira+Sans|Alegreya+Sans+SC|Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/Pretty-Footer.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/SwiftStyle.css')}}">
@@ -51,11 +51,11 @@
                             <li><a href="{{ route('stores') }}">Stores</a></li>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
-
-
+                            <li><a href="{{route('shoppingCart')}}"><i class="badge badge-primary">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}} <span class="fa fa-shopping-bag"></span></i></a></li>
                         @else
                             <li><a href="{{ route('about') }}">About</a></li>
                             <li><a href="{{ route('stores') }}">Stores</a></li>
+                            <li><a>{{Session::has('cart') ? Session::get('cart')->totalQty : ''}} <span class="fa fa-shopping-bag"> </span></a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

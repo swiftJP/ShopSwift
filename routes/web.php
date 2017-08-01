@@ -2,85 +2,68 @@
 /*Authentication*/
 Auth::routes();
 
-//Facebook Routes
-Route::get('/auth/facebook', 'Auth\LoginController@redirectToProvider')->name('facebooklogin');
-Route::get('/auth/facebook/callback', 'Auth\LoginController@redirectToProviderCallback')->name('facebookcallback');
+/*Facebook Routes*/
 
 
 /*Home Page*/
 Route::get('/home',  function () {
     return view('layouts.index');
-})->middleware('LaunchRedirect');
+})->name('home')->middleware('LaunchRedirect');
 
 Route::get('/', function () {
     return view('layouts.index');
 })->middleware('LaunchRedirect');
 
 /*Sending Orders to Checkout*/
-Route::post('/send', 'OrderController@newOrder')->name('send');
+Route::post('/send', 'ProductController@getCustom')->name('send');
 Route::post('/custom', 'OrderController@customOrder')->name('custom');
 
 /*Checkout Routes*/
 Route::get('/checkout', function(){
     return view('Checkout.Checkout');
-})->name('getcheckout');
+})->name('getcheckout')->middleware('LaunchRedirect');
 
 Route::post('/payment', 'PaymentController@StripePayment')->name('payment');
-Route::get('/cart', 'PaymentController@AddToCart')->name('cart');
+Route::get('/cart', 'PaymentController@AddToCart')->name('cart')->middleware('LaunchRedirect');
 
 /*Store Routes*/
-Route::get('/stores', function(){
-   return view('Stores.stores');
-})->name('stores')->middleware('LaunchRedirect'); //All Stores
+Route::get('/stores', 'StoreController@getStores')->name('stores'); //All Stores
+Route::get('/jd', 'StoreController@getJD')->name('jd'); // JD
+Route::get('/zara', 'StoreController@getZara')->name('zara');
+Route::get('/riverisland', 'StoreController@getRI')->name('RI'); //River Island
+Route::get('/missselfridge', 'StoreController@getMS')->name('MS'); //Miss Selfridge
+Route::get('/footlocker', 'StoreController@getFL')->name('FL'); //Primark
+Route::get('/boots', 'StoreController@getBoots')->name('boots'); //Boots
+Route::get('/bodyshop', 'StoreController@getBS')->name('body'); //Body Shop
+Route::get('/apple', 'StoreController@getApple')->name('apple'); //Apple
+Route::get('/custom', 'StoreController@getCustom')->name('custom'); //Custom Order
 
-Route::get('/aldi', function () {
-    return view('Stores.Aldi');
-})->name('aldi'); //Aldi
-
-Route::get('/riverisland', function () {
-    return view('Stores.RiverIsland');
-})->name('rive'); //Sainsburys
-
-Route::get('/tesco', function () {
-    return view('Stores.Tesc');
-})->name('tesc'); //Tesco
-
-Route::get('/mcdonalds', function () {
-    return view('Stores.Mcd');
-})->name('mcdo'); //Mcdonalds
-
-Route::get('/bodyshop', function () {
-    return view('Stores.bodyshop');
-})->name('body'); //KFC
-
-Route::get('/primark', function () {
-    return view('Stores.Primark');
-})->name('prim'); //Primark
-
-Route::get('/jd', function () {
-return view('Stores.Jd');
-})->name('jd'); //JD Sports
-
-Route::get('/99pstore', function () {
-    return view('Stores.99stores');
-})->name('99'); //99 Sports
-
-Route::get('/sportsdirect', function () {
-    return view('Stores.Sports-direct');
-})->name('SD'); //Sports Direct
-
-Route::get('/zara', function () {
-    return view('Stores.Zara');
-})->name('zara'); //Sports Direct
-
-//About Swift
+/*About Swift*/
 Route::get('/about', function() {
   return view('layouts.about');
 })->name('about');
 
-//Landing Page
+/*Cart*/
+Route::get('/cartjd/{id}', 'ProductController@getAddToCart')->name('addToCartJD'); //JD
+Route::get('/shoppingcart', 'ProductController@getCart')->name('shoppingCart');
+Route::get('/reduce/{id}', 'ProductController@getReduceByOne')->name('reduceByOne');
+Route::get('/remove/{id}', 'ProductController@getRemoveItem')->name('removeItem');
+
+Route::get('/cartzara/{id}', 'ProductController@getAddToCartZara')->name('addToCartZara'); //JD
+
+Route::get('/remove', 'ProductController@getRemoveCustom')->name('removeCustom');
+
+/*Landing Page*/
 Route::get('/coming-soon', function() {
     return view('layouts.landing');
 })->name('landing');
-
 Route::post('/waiting-list', 'LandingController@addToList')->name('list');
+
+/*Blog*/
+Route::get('/blog', function(){
+   return view('blog.blog');
+})->name('blog');
+
+Route::get('/blog/autumn-trends-2017', function(){
+    return view('blog.blog2');
+})->name('blog2');
