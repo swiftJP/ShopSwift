@@ -592,6 +592,60 @@ ul.nav-tabs li {
     background-color: #f7f7f7;
 }
 
+@media (max-width:1025px) {
+    .thumbnail h3 {
+        font-size: 30px;
+    }
+
+    .thumbnail h6 {
+        font-size: 25px;
+    }
+
+    .blog-author {
+        font-size: 10px;
+    }
+
+    .blog-date {
+        font-size: 20px;
+    }
+
+    .blog-time{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:767px) { /*Everything smaller than iPad*/
+    .thumbnail h3 {
+        font-size: 15px;
+    }
+
+    .thumbnail h6 {
+        font-size: 10px;
+    }
+
+    .blog-hr {
+        width:50px;
+        margin-top:0;
+        margin-bottom:0;
+    }
+
+    .blog-author {
+        font-size: 5px;
+    }
+
+    .blog-date {
+        font-size: 10px;
+    }
+
+    .blog-time{
+        font-size: 10px;
+    }
+
+    .blog-posts .thumbnail {
+        background-color: #ffffff;
+    }
+}
+
 #blog-para {
     font-family: 'Open Sans Condensed', sans-serif;
     color: #b4b2b5;

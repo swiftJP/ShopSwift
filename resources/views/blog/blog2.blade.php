@@ -35,22 +35,17 @@
                                             <br><br>
                                         </h4>
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-6">
                                         <div class="thumbnail">
-                                            <img class="img-responsive" src="{{asset('images/blog/allRedOutfit.jpg')}}"/>
+                                            <img class="img-responsive" src="{{asset('images/blog/RihannaRedDress.jpg')}}"/>
                                             <div class="caption">
                                                 <h6>Image credits: Vogue Italia, Zimbio</h6>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-6">
                                         <div class="thumbnail">
-                                            <img class="img-responsive" src="{{asset('images/blog/RihannaRedDress.jpg')}}"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="thumbnail">
-                                            <img class="img-responsive" src="{{asset('images/blog/redJumpSuit.jpg')}}"/>
+                                            <img class="img-responsive" src="{{asset('images/blog/allRedOutfit.jpg')}}"/>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +86,7 @@
                                         <h4>Strong metallic shades were embraced Chanel and Ralph Lauren in their recent fashion shows. Celebs are taking the concept even further by infusing metallic pieces with subtle colors, giving a remarkable look. Autumn 2017 is on course to be a shiny one!
                                         </h4>
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-12">
                                         <div class="thumbnail">
                                             <img class="img-responsive" src="{{asset('images/blog/metallicKendall.jpg')}}" />
                                             <div class="caption">
@@ -99,12 +94,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-6">
                                         <div class="thumbnail">
                                             <img class="img-responsive" src="{{asset('images/blog/metallicTrousers.jpg')}}" />
                                         </div>
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-6">
                                         <div class="thumbnail">
                                             <img class="img-responsive" src="{{asset('images/blog/metallicDress.jpg')}}" />
                                         </div>
